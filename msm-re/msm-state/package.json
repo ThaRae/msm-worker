@@ -1,0 +1,31 @@
+{
+  "name": "msm-state",
+  "version": "0.1.0",
+  "private": true,
+  "description": "View My Singing Monsters account state without launching the game. Reverses the PC client's auth flow (Steam ticket -> BBB auth token) and the SmartFoxServer-style game socket protocol.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "msm-state": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc && npm run build:wasm",
+    "build:wasm": "node scripts/build-wasm.mjs",
+    "start": "node dist/cli.js",
+    "test": "npm run build && node --test dist/",
+    "test:renderer": "npm run build && node scripts/smoke-wasm-preview.mjs"
+  },
+  "dependencies": {
+    "commander": "^14.0.1",
+    "steam-user": "^5.3.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.1",
+    "@types/steam-user": "^5.1.1",
+    "@types/ws": "^8.18.1",
+    "typescript": "^5.9.3"
+  }
+}

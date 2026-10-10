@@ -1,0 +1,71 @@
+# Local credentials and personal configuration
+.env
+.env.*
+!.env.example
+*.local.json
+.mcp.json
+.auth-token.json
+.steam-refresh-token.json
+.steam-user-data/
+.aws/
+.codex/
+.agents/
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+steamsync.txt
+
+# Account snapshots, saved login data, packet captures and logs
+*.log
+*.mitm
+*.pcap
+*.pcapng
+*.hex
+login.xml
+save.xml
+ticket.txt
+ticket_out.txt
+dnslog.txt
+state_*.json
+frames/
+frames2/
+frames3/
+msm-re/mitm/cadir/
+
+# Extracted game installations, patched binaries and archives
+ipa-data/
+extracted/
+ida-db/
+*.ipa
+*.exe
+*.dll
+*.dylib
+*.bin
+*.i64
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+*.zip
+
+# Dependencies, generated outputs and machine files
+node_modules/
+dist/
+build/
+.cache/
+__pycache__/
+*.pyc
+*.o
+*.a
+*.metallib
+.DS_Store
+
+# Local SSH authentication keys
+.ssh/
+
+# Private, version-specific tooling kept out of the public repository
+msm-ios-steam/
+msm-macos/
